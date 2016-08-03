@@ -1,3 +1,4 @@
+{{./hasElem.js}}
 function contains(pn,cn){
 	if(pn.contains){
 		return pn.contains(cn);

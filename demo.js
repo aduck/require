@@ -7,6 +7,12 @@ function addEvent(o,type,cb){
 		o['on'+type]=cb;
 	}
 }
+function hasElem(arr,o){
+	for(var i=0,len=arr.length;i<len;i++){
+		if(arr[i]==o)	return true;
+	}
+	return false;
+}
 function contains(pn,cn){
 	if(pn.contains){
 		return pn.contains(cn);
@@ -14,12 +20,7 @@ function contains(pn,cn){
 		return pn.compareDocumentPosition(cn)==20 || pn.compareDocumentPosition(cn)==16 || pn==cn;
 	}
 }
-function hasElem(arr,o){
-	for(var i=0,len=arr.length;i<len;i++){
-		if(arr[i]==o)	return true;
-	}
-	return false;
-}
+
 
 function blur(o,callback,filters){
 	var body=document.body;
